@@ -11,7 +11,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ className }) => {
     <div
       className={cn(
         'relative w-full max-w-5xl mx-auto rounded-2xl p-8 md:p-12 flex flex-col justify-between overflow-hidden min-h-[350px] lg:min-h-[400px]',
-        'bg-gradient-to-br from-[#1e1b4b] via-orange-950 to-primary text-primary-foreground',
+        'bg-primary text-primary-foreground',
         className
       )}
     >
