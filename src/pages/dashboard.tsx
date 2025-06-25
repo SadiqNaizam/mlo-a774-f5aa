@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const DashboardPage: React.FC = () => {
   return (
@@ -30,11 +31,13 @@ const DashboardPage: React.FC = () => {
           <CardHeader>
             <CardTitle>Recent Sales</CardTitle>
             <CardDescription>
-              You made 265 sales this month.
+              You made 481 sales this month.
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <RecentSales />
+            <ScrollArea className="h-[350px]">
+              <RecentSales />
+            </ScrollArea>
           </CardContent>
         </Card>
       </div>
