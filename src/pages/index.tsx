@@ -1,8 +1,9 @@
 import React from 'react';
 
 // Import organism components
-import HeroBanner from '../components/HeroBanner/HeroBanner';
-import NewsletterForm from '../components/Newsletter/NewsletterForm';
+import HeroBanner from '../components/herobanner/herobanner';
+import NewsletterForm from '../components/newsletter/newsletterform';
+import Stats from '../components/stats/stats';
 
 /**
  * The main landing page for Pulse Robot.
@@ -15,6 +16,7 @@ const IndexPage: React.FC = () => {
       {/* This inner container manages the spacing between the main page elements */}
       <div className="flex w-full flex-col items-center gap-16 px-4 md:gap-20 md:px-8">
         <NewsletterForm />
+        <Stats />
         <HeroBanner />
       </div>
     </>
