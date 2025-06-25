@@ -1,11 +1,13 @@
 import React from 'react';
 import { Asterisk } from 'lucide-react';
+import { NavLink, Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const navItems = [
-  { name: 'Home', href: '#' as const },
-  { name: 'About', href: '#' as const },
-  { name: 'Contact', href: '#' as const },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 interface HeaderProps {
@@ -26,26 +28,34 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
       )}
     >
       {/* Logo Section */}
-      <a href="#" className="flex items-center gap-2">
+      <Link to="/" className="flex items-center gap-2">
         <Asterisk className="h-7 w-7 text-foreground" />
         <span className="text-xl font-bold text-foreground">Pulse Robot</span>
-      </a>
+      </Link>
 
-      {/* Navigation Links */}
-      <nav>
-        <ul className="flex items-center space-x-6">
-          {navItems.map((item) => (
-            <li key={item.name}>
-              <a
-                href={item.href}
-                className="text-base font-medium text-foreground transition-colors hover:text-primary"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {/* Navigation Links & Theme Toggle */}
+      <div className="flex items-center gap-6">
+        <nav>
+          <ul className="flex items-center space-x-6">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <NavLink
+                  to={item.href}
+                  className={({ isActive }) =>
+                    cn(
+                      'text-base font-medium text-foreground transition-colors hover:text-primary',
+                      isActive && 'text-primary'
+                    )
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <ThemeToggle />
+      </div>
     </header>
   );
 };
