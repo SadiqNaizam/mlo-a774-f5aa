@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           <span className="sr-only">Pulse Robot</span>
         </Link>
         <Link
-          to="/"
+          to="/dashboard"
           className="text-foreground transition-colors hover:text-foreground"
         >
           Dashboard
