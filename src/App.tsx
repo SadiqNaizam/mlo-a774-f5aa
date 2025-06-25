@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 // Import layout components
 import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 
 // The Toaster component is required for notifications
 import { Toaster } from 'sonner';
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
         <Outlet />
       </main>
+      <Footer />
       <Toaster richColors />
     </div>
   );
