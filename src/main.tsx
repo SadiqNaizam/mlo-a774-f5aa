@@ -6,9 +6,7 @@ import './index.css';
 
 import App from './App';
 import { ThemeProvider } from './components/theme-provider';
-import IndexPage from './pages/index';
-import AboutPage from './pages/about';
-import ContactPage from './pages/contact';
+import DashboardPage from './pages/dashboard';
 
 const router = createBrowserRouter([
   {
@@ -17,15 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <IndexPage />,
-      },
-      {
-        path: 'about',
-        element: <AboutPage />,
-      },
-      {
-        path: 'contact',
-        element: <ContactPage />,
+        element: <DashboardPage />,
       },
     ],
   },
