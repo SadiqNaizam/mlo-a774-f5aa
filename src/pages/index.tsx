@@ -35,7 +35,7 @@ const IndexPage: React.FC = () => {
       <Footer />
       
       {/* Toaster for displaying notifications from the NewsletterForm submission */}
-      <Toaster richColors theme="dark" />
+      <Toaster richColors />
     </div>
   );
 };
