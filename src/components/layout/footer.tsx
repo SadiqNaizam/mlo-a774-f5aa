@@ -11,6 +11,8 @@ interface FooterProps {
  * @returns {JSX.Element} The rendered footer component.
  */
 const Footer: React.FC<FooterProps> = ({ className }) => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer
       className={cn(
@@ -19,25 +21,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
       )}
     >
       <p className="text-center text-sm text-muted-foreground px-4">
-        This template takes inspiration from{' '}
-        <a
-          href="https://www.designjoy.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium text-primary hover:underline"
-        >
-          DesignJoy's
-        </a>{' '}
-        BUILD WARS design, built entirely with Lovable by{' '}
-        <a
-          href="https://twitter.com/rezaularif"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium text-primary hover:underline"
-        >
-          Rezaul Arif
-        </a>
-        .
+        &copy; {currentYear} Pulse Robot. All Rights Reserved.
       </p>
     </footer>
   );
